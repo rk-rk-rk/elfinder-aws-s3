@@ -10,9 +10,9 @@
     }
   ],
   "require": {
-    "php": ">= 8.0",
+    "php": ">= 7.4",
     "studio-42/elfinder": "^2.1.10",
-    "league/flysystem-aws-s3-v3": "^3.0",
+    "league/flysystem-aws-s3-v3": "^2.1",
     "intervention/image": "^2.0"
   },
   "autoload": {

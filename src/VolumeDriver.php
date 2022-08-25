@@ -182,7 +182,7 @@ class VolumeDriver extends \elFinderVolumeDriver
         }
 
         // If not exists, return empty
-        if (!$this->fs->has($path)) {
+        if (!$this->fs->fileExists($path)) {
 
             // Check if the parent doesn't have this path
             if ($this->_dirExists($path)) {
@@ -209,7 +209,7 @@ class VolumeDriver extends \elFinderVolumeDriver
         }
 
         // Check if file, if so, check mimetype when available
-        if ($this->fs->has($path)) {
+        if ($this->fs->fileExists($path)) {
             try {
                 $stat['mime'] = $this->fs->mimeType($path);
             } catch (UnableToRetrieveMetadata $e) {
@@ -217,7 +217,7 @@ class VolumeDriver extends \elFinderVolumeDriver
             }
         }
 
-        if ($this->fs->has($path)) {
+        if ($this->fs->fileExists($path)) {
             $stat['url'] = $this->URL.$path;
         }
 
